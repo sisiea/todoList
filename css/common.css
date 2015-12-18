@@ -25,6 +25,9 @@
 	font-size:30px;
 	margin-bottom: 7px;
 }
+#listArea ul li input{
+	margin-right: 5px;
+}
 #listArea ul li #taskDate{
 	position:absolute;
 	right:0px;

@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html lang="en" ng-app="toDoApp">
+<head>
+	<!--
+	** Example App
+	** Licensed under the Apache License v2.0
+	** http://www.apache.org/licenses/LICENSE-2.0
+	** Built by Jay Kanakiya ( @techiejayk )
+	-->
+	<title>Angular js Boilerplate</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Angular js Example for tutorial"/>
+	<meta name="author" content="Jay Kanakiya">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/common.css">
+
+	<script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/jquery-ui.min.js"></script>
+  <script src="js/libs/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/angular.min.js"></script>
+  <script src="js/libs/angular-local-storage.min.js"></script>
+  <script src="js/libs/sortable.js"></script>
+  <script src="js/app.js"></script>
+	<style>
+	</style>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+		<div class="container" id="playground" ng-controller="TodoCtrl" ng-init="init()">
+			<div id="newTaskArea">
+				<input type="text" ng-model="newTodo.taskName" id="addTxt" placeholder=" Add New Todo">
+				<br>
+				<input type="date" ng-model="newTodo.date" id="addDate">
+				<br>
+				<button class="btn btn-default" id="addBtn" ng-click="addToDo()">Add</button>
+		    </div>
+			<div id="listArea">
+				<ul class="list-unstyled" ng-model="todos" ui-sortable="todoSortable">
+					<li ng-repeat="todo in todos">
+						<input ng-model="todo.isDone" type="checkbox">{{todo.taskName}}{{}}
+					</li>
+				</ul>
+				<div class="debug">
+					<p class="text-info">{{todos|json}}</p>
+				</div>
+			</div>
+			<script type="text/javascript" async>
+			  var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-33060097-3']);
+			  _gaq.push(['_setDomainName', 'jaykanakiya.com']);
+			  _gaq.push(['_trackPageview']);
+
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+			</script>
+		</div>
+</body>
+</html>

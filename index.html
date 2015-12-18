@@ -47,7 +47,7 @@
 			<div id="listArea">
 				<ul class="list-unstyled" ng-model="todos" ui-sortable="todoSortable">
 					<li ng-repeat="todo in todos">
-						<input ng-model="todo.isDone" type="checkbox">{{todo.taskName}}{{}}
+						<input ng-model="todo.isDone" type="checkbox">{{todo.taskName}}<span id="taskDate">{{todo.date | date:'medium'}}</span>
 					</li>
 				</ul>
 				<div class="debug">

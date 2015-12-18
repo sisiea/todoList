@@ -20,3 +20,13 @@
 }
 #addBtn{
 }
+#listArea ul li{
+	position:relative;
+	font-size:30px;
+}
+#listArea ul li #taskDate{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	font-size:15px;
+}
